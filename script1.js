@@ -1,17 +1,12 @@
-let clicks = document.querySelector('.clicks');
-let result = document.querySelector('.result');
-// let arg =['x','o','y'];
+let button = document.querySelector('.clicks');
+let ans = document.querySelector('.result');
 
-clicks.addEventListener('click', function clickMe(){
-    alert('ok')
-})
+let arg = ['x', 'o'];
 
-
-// for(let i in arg){
-        // click.addEventListener('click', function clickMe(){
-        // let value = arg[i];
-        // alert('ok')    
-        // result.innerHTML=value;
-        // i++;
-    // })
-// }
+for (let i in arg){
+    let value = arg[i];
+    // alert(value);
+    button.addEventListener('click', function(){
+       ans.innerHTML= value;
+    })
+}
