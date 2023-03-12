@@ -3,9 +3,10 @@ let ans = document.querySelector('.result');
 
 let arg = ['x', 'o'];
 
-button.addEventListener('click', function(){
-    for (let i in arg){
+for (let i in arg){
+        button.addEventListener('click', function(){
         let value = arg[i];
         ans.innerHTML= value;
+    })
     }
-})
+ 
