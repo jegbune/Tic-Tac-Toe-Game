@@ -1,107 +1,14 @@
 let box = document.querySelector('.box');
-// let box1 = document.querySelector('.box1');
-// let box2 = document.querySelector('.box2');
-// let box3 = document.querySelector('.box3');
-// let box4 = document.querySelector('.box4');
-// let box5 = document.querySelector('.box5');
-// let box6 = document.querySelector('.box6');
-// let box7 = document.querySelector('.box7');
-// let box8 = document.querySelector('.box8');
 
-let arg =['x','o'];
-
-// alert('ok');
-
-
-
-
-// alert('ok');
-for(let i in arg){
-    let value = arg[i];
-    box.addEventListener('click', function getValue(){
-        box.innerHTML= value;
-        
-    });
-
-    i++;
-
-    box.addEventListener('click', function getValue(){
-        box .innerHTML = value;
-        
-    });
-
-    i++;
-    
-    }
-
-
-// box2.addEventListener('click', function getValue(){
-//     // alert('ok');
-//     for(let i=0; i<arg.length; i++){
-//         let value = arg[i];
-//         box2.innerHTML = value;
-//         // alert(value)
-//     }
-
-// });
-
-// box3.addEventListener('click', function getValue(){
-//     // alert('ok');
-//     for(let i=0; i<arg.length; i++){
-//         let value = arg[i];
-//         box3.innerHTML = value;
-//         // alert(value)
-//     }
-
-// });
-
-// box4.addEventListener('click', function getValue(){
-//     // alert('ok');
-//     for(let i=0; i<arg.length; i++){
-//         let value = arg[i];
-//         box4.innerHTML = value;
-//         // alert(value)
-//     }
-
-// });
-
-// box5.addEventListener('click', function getValue(){
-//     // alert('ok');
-//     for(let i=0; i<arg.length; i++){
-//         let value = arg[i];
-//         box5.innerHTML = value;
-//         // alert(value)
-//     }
-
-// });
-
-// box6.addEventListener('click', function getValue(){
-//     // alert('ok');
-//     for(let i=0; i<arg.length; i++){
-//         let value = arg[i];
-//         box6.innerHTML = value;
-//         // alert(value)
-//     }
-
-// });
-
-// box7.addEventListener('click', function getValue(){
-//     // alert('ok');
-//     for(let i=0; i<arg.length; i++){
-//         let value = arg[i];
-//         box7.innerHTML = value;
-//         // alert(value)
-//     }
-
-// });
-
-// box8.addEventListener('click', function getValue(){
-//     // alert('ok');
-//     for(let i=0; i<arg.length; i++){
-//         let value = arg[i];
-//         box8.innerHTML = value;
-//         // alert(value)
-//     }
-
-// });
-
+const Player_X_Class = 'X';
+const player_O_Class = 'circle';
+const WINNING_COMBINATIONS = [
+    ['0,1,2'],
+    ['3,4,5'],
+    ['6,7,8'],
+    ['0,3,6'],
+    ['1,4,7'],
+    ['2,5,8'],
+    ['0,4,8'],
+    ['2,4,6'],
+]
