@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin:50px auto;
+    width: 350px;
+    /* border:1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+}
+
+.box {
+    min-height: 100px;
+    border:1px solid black
+}
+
+.box-1, .box-2, .box-3{
+    border-top: none;
+}
+
+.box-1, .box-4, .box-7{
+    border-left: none;
+}
+
+.box-7, .box-8, .box-9{
+    border-bottom: none;
+}
+
+.box-3, .box-6, .box-9{
+    border-right: none;
+}
