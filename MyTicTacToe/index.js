@@ -1,6 +1,8 @@
 const block = document.getElementsByClassName("box")
-let player_X = true;
-let player_O = false;
+const restartBtn = document.getElementById("restart")
+
+
+
 const winCondition = [
     ['0,1,2'],
     ['3,4,5'],
@@ -11,17 +13,17 @@ const winCondition = [
     ['0,4,8'],
     ['2,4,6'],
 ]
-const newBox = Array.from(block);
+const box = Array.from(block);
 
-newBox.forEach(newBox => newBox.addEventListener("click", function start(){
-        alert(x)
-        if (newBox.textContent === "" || newBox.textContent === "O"){
-            newBox.textContent = "X";
-        } else {
-            newBox.textContent = "O"
-        }
+function startGame(){
+    box.forEach(box => box.addEventListener("click", cellClicked))
+    restartBtn.addEventListener("click",  )
+}
 
-    }
-    
-    // alert(element)
-))
+function cellClicked() {
+
+}
+
+function restartGame() {
+     
+}
