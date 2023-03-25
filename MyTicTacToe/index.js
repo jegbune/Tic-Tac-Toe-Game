@@ -1,7 +1,6 @@
 const block = document.getElementsByClassName("box")
 const restartBtn = document.getElementById("restart")
-
-
+const statusText = document.getElementById("statusText")
 
 const winCondition = [
     ['0,1,2'],
@@ -13,11 +12,16 @@ const winCondition = [
     ['0,4,8'],
     ['2,4,6'],
 ]
-const box = Array.from(block);
+let options = ["", "", "", "", "", "", "", "", ""]
+let currentPlayer ="X";
+let running = false;
+
+// const box = Array.from(block);
 
 function startGame(){
     box.forEach(box => box.addEventListener("click", cellClicked))
-    restartBtn.addEventListener("click",  )
+    restartBtn.addEventListener("click", restartGame)
+    statusText.textContent = `${currentPlayer}'s Turn`
 }
 
 function cellClicked() {

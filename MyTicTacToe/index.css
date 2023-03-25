@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-size: 5rem;
 }
 
 .container {
@@ -29,4 +30,12 @@ body {
 
 .box-3, .box-6, .box-9{
     border-right: none;
+}
+#statusText {
+    margin: 0px auto;
+}
+
+#restart {
+    display: block;
+    margin: 0px auto;
 }
