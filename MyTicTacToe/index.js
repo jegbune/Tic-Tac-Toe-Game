@@ -13,7 +13,7 @@ const winCondition = [
     ['2,4,6'],
 ]
 let options = ["", "", "", "", "", "", "", "", ""]
-let currentPlayer ="X";
+let currentPlayer ="o";
 let running = false;
 
 // const box = Array.from(block);
