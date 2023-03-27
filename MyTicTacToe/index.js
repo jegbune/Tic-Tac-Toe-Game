@@ -19,9 +19,11 @@ let running = false;
 // const box = Array.from(block);
 
 function startGame(){
-    box.forEach(box => box.addEventListener("click", cellClicked))
-    restartBtn.addEventListener("click", restartGame)
-    statusText.textContent = `${currentPlayer}'s Turn`
+    box.forEach(box => box.addEventListener("click", cellClicked));
+    restartBtn.addEventListener("click", restartGame);
+    statusText.textContent = `${currentPlayer}'s Turn`;
+    
+
 }
 
 function cellClicked() {
