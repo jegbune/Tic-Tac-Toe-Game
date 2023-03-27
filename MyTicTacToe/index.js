@@ -1,4 +1,4 @@
-const block = document.getElementsByClassName("box")
+const block = document.querySelectorAll(".box")
 const restartBtn = document.getElementById("restart")
 const statusText = document.getElementById("statusText")
 
@@ -17,11 +17,13 @@ let currentPlayer ="X";
 let running = false;
 
 // const box = Array.from(block);
+startGame();
 
 function startGame(){
-    box.forEach(box => box.addEventListener("click", cellClicked));
+    block.forEach(block => block.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
     statusText.textContent = `${currentPlayer}'s Turn`;
+    
     
 
 }
