@@ -4,7 +4,8 @@ body {
 }
 
 .container {
-    margin:50px auto;
+    margin: 0px auto;
+    margin-top: 50px;
     width: 300px;
     /* border:1px solid black; */
     display: grid;
@@ -32,7 +33,9 @@ body {
     border-right: none;
 }
 #statusText {
-    margin: 0px auto;
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px
 }
 
 #restart {
