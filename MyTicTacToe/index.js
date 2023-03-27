@@ -23,13 +23,23 @@ function startGame(){
     block.forEach(block => block.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
     statusText.textContent = `${currentPlayer}'s Turn`;
+    running = true;
     
-    
-
 }
 
 function cellClicked() {
+    const cellIndex = this.getAttribute("cellIndex");
 
+    if(options[cellIndex] != "" || !running){
+        return;
+    }
+
+    updateCell(this, cellIndex)
+    checkWinner();
+}
+function updateCell(cell, index){
+    options[index] = currentPlayer;
+    cell.textContent = currentPlayer;
 }
 
 function restartGame() {
