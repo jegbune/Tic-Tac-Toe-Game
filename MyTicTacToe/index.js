@@ -49,8 +49,20 @@ function changePlayer() {
 }
 
 function checkWinner() {
+    for(let i = 0; i < winCondition.length; i++){
+         const condition = winCondition[i];
+         const cellA = options[0];
+         const cellB = options[1];
+         const cellC = options[2];
+
+         if (cellA == ""|| cellB == "" ||cellC == "") {
+            statusText.textContent = `${currentPlayer} wins!`
+
+         }
+
+    }
     
-}
+
 function restartGame() {
      
 }
