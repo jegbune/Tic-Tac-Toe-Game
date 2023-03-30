@@ -1,7 +1,7 @@
-const block = document.querySelectorAll(".box")
-const restartBtn = document.getElementById("restart")
-const statusText = document.getElementById("statusText")
-const winCondition = [
+const cell = document.querySelectorAll(".box")
+const restartBtn = document.querySelector("restart")
+const statusText = document.querySelector("#statusText")
+const winConditions = [
     ['0,1,2'],
     ['3,4,5'],
     ['6,7,8'],
@@ -18,9 +18,9 @@ let running = false;
 startGame();
 
 function startGame(){
-    block.forEach(block => block.addEventListener("click", cellClicked));
+    cell.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
-    statusText.textContent = `${currentPlayer}'s Turn`;
+    statusText.textContent = `${currentPlayer}'s turn`;
     running = true;  
 }
 function cellClicked() {
@@ -41,11 +41,11 @@ function changePlayer() {
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s Turn`
 }
-function checkWinner() {
+function checkWinner(){
     let roundWon = false;
 
-    for(let i = 0; i < winCondition.length; i++){
-         const condition = winCondition[i];
+    for(let i = 0; i < winConditions.length; i++){
+         const condition = winConditions[i];
          const cellA = options[condition[0]];
          const cellB = options[condition[1]];
          const cellC = options[condition[2]];
