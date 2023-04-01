@@ -16,7 +16,8 @@ body {
 
 .box {  
     min-height: 100px;
-    border:1px solid black
+    border:1px solid black;
+    cursor:pointer;
 }
 
 /* .box-1, .box-2, .box-3{
