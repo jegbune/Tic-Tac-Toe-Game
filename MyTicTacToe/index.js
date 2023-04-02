@@ -12,8 +12,8 @@ const cells = document.querySelectorAll(".box")
 //     [2,4,6]
 // ];
 // let options = ["", "", "", "", "", "", "", "", ""]
-// let currentPlayer = "X";
-// let running = false;
+let currentPlayer = "X";
+let running = false;
 
 initializeGame();
 
@@ -25,19 +25,18 @@ function initializeGame() {
 }
 function cellClicked(){
     const cellIndex = this.getAttribute("cellIndex");
-    alert(cellIndex);
 //     if(options[cellIndex] != "" || !running){
 //         return;
 //     }
 
-//    updateCell(this, cellIndex);
+   updateCell(this, cellIndex);
 // //    changePlayer();
 //    checkWinner();
 }
-// function updateCell(cell, index){
+function updateCell(cell, index){
 //     options[index] = currentPlayer;
-//     cell.textContent = currentPlayer;
-// } 
+    cell.textContent = currentPlayer;
+} 
 // function changePlayer(){
 //     currentPlayer = (currentPlayer == "X") ? "O" : "X";
 //     statusText.textContent = `${currentPlayer}'s turn`;

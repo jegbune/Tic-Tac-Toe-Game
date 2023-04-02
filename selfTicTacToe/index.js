@@ -2,8 +2,8 @@ const cells = document.querySelectorAll(".cells");
 // const status = document.querySelector("#status");
 // const restartBtn = document.querySelector("#restart");
 
-// let currentplayer = "X";
-// let running = false;
+let currentplayer = "X";
+let running = false;
 
 startGame();
 
@@ -14,5 +14,10 @@ function startGame() {
 
 function player() {
     const index = this.getAttribute("num");
-    alert(index);
+    // alert(index);
+    currentCell(this, index)
+}
+
+function currentCell(cell, index) {
+cell.textContent = currentPlayer;
 }
