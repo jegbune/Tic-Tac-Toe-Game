@@ -1,16 +1,18 @@
-const cells = document.querySelectorAll("#cells");
-const status = document.querySelector("#status");
-const restartBtn = document.querySelector("#restart");
+const cells = document.querySelectorAll(".cells");
+// const status = document.querySelector("#status");
+// const restartBtn = document.querySelector("#restart");
 
-let currentplayer = "X";
-running = false;
+// let currentplayer = "X";
+// let running = false;
 
-function startGame () {
-    cells.forEach(cell => cell.addEventListener("click", player) );
+startGame();
+
+function startGame() {
+    cells.forEach(cells => cells.addEventListener("click", player));
     running= true;
 }
 
-// function player() {
-//     let num = this.getAttribute("num");
-//     alert(num)
-// }
+function player() {
+    const index = this.getAttribute("num");
+    alert(index);
+}
