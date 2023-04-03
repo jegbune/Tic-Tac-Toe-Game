@@ -1,6 +1,6 @@
 const cells = document.querySelectorAll(".cells");
 const statusText = document.querySelector("#status");
-// const restartBtn = document.querySelector("#restart");
+const restartBtn = document.querySelector("#restart");
 
 
 let currentPlayer = "X";
@@ -10,6 +10,7 @@ startGame();
 
 function startGame() {
     cells.forEach(cells => cells.addEventListener("click", player));
+    statusText.textContent = `${currentPlayer}'s turn`
     running= true;
 
 }
@@ -23,16 +24,19 @@ function player() {
 
 function currentCell(cell) {
     cell.textContent = currentPlayer;
+    
     changePlayer();
 
 }
 
 function changePlayer() {
     currentPlayer =(currentPlayer =="X") ? "O" : "X";
+    statusText.textContent = `${currentPlayer}'s turn`
+
 }
 
-function checkWinner() {
-    if (cells[0].textContent == cells[1].textContent && cells[1].textContent == cells[2].textContent) {
-        statusText.textContent = `${currentPlayer} wins!`
-    }
-}
+// function checkWinner() {
+//     if (cells[0].textContent == cells[1].textContent && cells[1].textContent == cells[2].textContent) {
+//         statusText.textContent = `${currentPlayer} wins!`
+//     }
+// }
