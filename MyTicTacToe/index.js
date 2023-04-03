@@ -60,8 +60,8 @@ for(let i = 0; i < winConditions.length; i++){
 }
     if(roundWon) {
         statusText.textContent = `${currentPlayer} wins!`;
-        running = false;
     }
+
     else if(!options.includes("")){
         statusText.textContent = `Draw!`;
         running =false;
@@ -79,5 +79,3 @@ function restartGame(){
     running = true;
     
 }
-
-
