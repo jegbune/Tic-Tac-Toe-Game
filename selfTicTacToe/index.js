@@ -31,7 +31,7 @@ function player() {
 
     currentCell(this, index)
     checkWinner();
-    changePlayer();
+    // changePlayer();
 }
 
 function currentCell(cell, index) {
@@ -63,14 +63,16 @@ function checkWinner() {
         }
     }
         if(roundwon){
-            statusText.textContent =`${currentPlayer} wins!`
+            statusText.textContent =`${currentPlayer} wins!`;
+            running = false;
+
         }
         else if (!options.includes("")){
             statusText.textContent = `Draw`;
             running =false;
         }
         else{
-            // changePlayer()
+            changePlayer()
         }
 
         // alert(condition1)
