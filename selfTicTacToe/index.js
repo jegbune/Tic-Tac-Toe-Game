@@ -31,15 +31,12 @@ function player() {
 
     currentCell(this, index)
     checkWinner();
-    // changePlayer();
+    changePlayer();
 }
 
 function currentCell(cell, index) {
     cell.textContent = currentPlayer;
-    options[index] = currentPlayer; 
-    
-    
-    
+    options[index] = currentPlayer;   
 }
 
 function changePlayer() {
@@ -57,6 +54,9 @@ function checkWinner() {
         const condition1 = options[condition[1]];
         const condition2 = options[condition[2]];
         
+        if(condition0 == "" || condition1 == "" || condition2 == "") {
+            continue;
+        }       
         if(condition0 == condition1 && condition1 == condition2){
             roundwon = true
             break;
@@ -65,8 +65,12 @@ function checkWinner() {
         if(roundwon){
             statusText.textContent =`${currentPlayer} wins!`
         }
+        else if (!options.includes("")){
+            statusText.textContent = `Draw`;
+            running =false;
+        }
         else{
-            changePlayer()
+            // changePlayer()
         }
 
         // alert(condition1)
