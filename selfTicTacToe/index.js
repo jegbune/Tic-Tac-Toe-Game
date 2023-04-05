@@ -75,9 +75,7 @@ function checkWinner() {
             changePlayer()
         }
 
-        // alert(condition1)
     }
-//     if (cells[0].textContent == cells[1].textContent && cells[1].textContent == cells[2].textContent) {
-//         statusText.textContent = `${currentPlayer} wins!`
-//     }
 
+
+    
